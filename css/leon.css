@@ -8,4 +8,7 @@ body {
 /* End Global Rules */
 /* Star Variables */
 
-/* End Variables */
+/* End Variable */
+.parent{
+    background-color: #eee;
+}
