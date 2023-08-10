@@ -9,13 +9,11 @@ body {
 /* Star Variables */
 
 /* End Variable */
-.parent {
-    background: #eee;
-}
+
+/* Start Global Rules */
 .container{
     padding:0 15px 0 15px;
     margin: 0 auto 0 auto;
-    background-color: #aaa;
     margin: auto;
 }
 
@@ -56,3 +54,42 @@ body {
 }
 
 /* End Media Queries For All Screen Sizes  */
+
+/* End Global Rules */
+
+/* Start Header */
+
+header {
+    padding: 20px;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    width: 60px;
+}
+header .links {
+    position: relative;
+}
+header .links .burger-icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+header .links .burger-icon span {
+    background-color: #333;
+    margin-bottom: 3px;
+    height: 3px;
+}
+header .links .burger-icon span:first-child{
+    width: 100%;
+}
+header .links .burger-icon span:nth-child(2){
+    width: 60%;
+}
+header .links .burger-icon span:last-child{
+    width: 100%;
+}
+/* End Header */
