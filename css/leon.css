@@ -77,19 +77,62 @@ header .links .burger-icon {
     width: 30px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
+    right: 0;
+}
+header .links:hover .burger-icon span:nth-child(2) {
+    width: 100%;
+}
+header .links:hover ul {
+    display: block;
 }
 header .links .burger-icon span {
     background-color: #333;
     margin-bottom: 3px;
-    height: 3px;
+    height: 2px;
 }
 header .links .burger-icon span:first-child{
     width: 100%;
 }
 header .links .burger-icon span:nth-child(2){
     width: 60%;
+    transition: 0.3s;
 }
 header .links .burger-icon span:last-child{
     width: 100%;
+}
+header .links ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: #555;
+    right: 0;
+    top: calc(100% + 15px);
+    min-width: 200px;
+    display: none;
+    transition: 3s;
+}
+header .links ul::before{
+    content: '';
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #eee transparent;
+    position: absolute;
+    top: -20px;
+    right: 5px;
+}
+header .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    background-color: #eee;
+    transition: 0.3s;
+}
+header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd;
+}
+header .links ul li a:hover{
+    padding-left: 25px;
 }
 /* End Header */
