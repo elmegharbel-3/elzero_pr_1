@@ -10,6 +10,9 @@ body {
 :root {
     --main-color: #10cab7;
     --secondary-color: #2c4755;
+    --para-color: #777;
+    --section-background: #f6f6f6;
+    --section-padding: 60px;
 }
 /* End Variable */
 /* Start components */
@@ -79,6 +82,10 @@ body {
 /* Custom */
 
 @media (max-width: 1199px) {
+    .services .content .col:last-child{
+        display: none;
+    }
+
 }
 
 /* End Media Queries For All Screen Sizes  */
@@ -217,7 +224,7 @@ header .links ul li a:hover{
 }
 .features .feat p {
     line-height: 1,8;
-    color: #777;
+    color: var(--para-color);
     font-size: 17px;
 }
 
@@ -272,3 +279,32 @@ header .links ul li a:hover{
 }
 
 /* End Services */
+/* Start Portfolio */
+.portfolio {
+    padding: 60px 0;
+    background-color: var(--section-background);
+}
+.portfolio .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 30px;
+    margin: 80px 0 0;
+}
+.portfolio .content .card {
+    background-color: white;
+}
+.portfolio .content .card img {
+    max-width: 100%;
+}
+.portfolio .content .card .info {
+    padding: 20px;
+}
+.portfolio .content .card .info h3 {
+    margin: 0;
+}
+.portfolio .content .card .info p {
+    color: var(--para-color);
+    line-height: 1,6;
+    margin-bottom: 0;
+}
+/* End Portfolio */
