@@ -60,6 +60,17 @@ body {
     .container{
         width: 750px
     }
+    .about .container .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about .container .content .col .image {
+        margin: 0 auto 60px;
+    }
+    .about .content .image::before,
+  .about .content .image::after {
+    display: none;
+  }
 }
 
 /* Medium Screens */
@@ -308,3 +319,61 @@ header .links ul li a:hover{
     margin-bottom: 0;
 }
 /* End Portfolio */
+/* Start About */
+.about {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.about .container .content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+.about .container .content .col .image{
+    position: relative;
+}
+.about .container .content .col .image img{
+    width: 250px;
+    height: 375px;
+    max-width: 100%;
+}
+.about .container .content .col .image::before {
+    content: "";
+    position: absolute;
+    background-color: #ebeced;
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+}
+.about .container .content .col .image::after {
+    top: -40px;
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 300px;
+    border-left: 80px solid var(--main-color);
+    border-bottom: 80px solid var(--main-color);
+    z-index: -1;
+    right: -150px;
+}
+.about .container .content .col:last-child{
+    flex-basis: calc(100% - 500px);
+}
+.about .container .content .col p:first-of-type {
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 50px;
+}
+.about hr {
+    width: 50%;
+    border-color: var(--main-color);
+    display: inline-block;
+}
+.about .container .content .col p:last-of-type {
+    line-height: 2;
+    color: var(--para-color);
+}
+/* End About */
